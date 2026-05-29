@@ -24,9 +24,9 @@ const player = {
 
     y:400,
 
-    width:120,
+    width:140,
 
-    height:120,
+    height:180,
 
     img:new Image(),
 
@@ -391,9 +391,9 @@ function drawBackground(){
 
         0,
 
-        canvas.width,
+        window.innerWidth,
 
-        canvas.height
+        window.innerHeight
 
     );
 
@@ -477,5 +477,13 @@ function gameLoop(){
     requestAnimationFrame(gameLoop);
 
 }
+
+document.body.addEventListener("click",()=>{
+
+    if(document.documentElement.requestFullscreen){
+
+        document.documentElement.requestFullscreen();
+    }
+});
 
 gameLoop();
