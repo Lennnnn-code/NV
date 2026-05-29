@@ -304,19 +304,17 @@ function checkAttack(){
 // DRAW CHARACTER
 function drawCharacter(character){
 
-    ctx.drawImage(
+    if(character.img.complete){
 
-        character.img,
+        ctx.drawImage(
 
-        character.x,
-
-        character.y,
-
-        character.width,
-
-        character.height
-
-    );
+            character.img,
+            character.x,
+            character.y,
+            character.width,
+            character.height
+        );
+    }
 
 }
 
@@ -383,19 +381,17 @@ if(stage === "Night"){
 
 function drawBackground(){
 
-    ctx.drawImage(
+    if(bg.complete){
 
-        bg,
+        ctx.drawImage(
 
-        0,
-
-        0,
-
-        window.innerWidth,
-
-        window.innerHeight
-
-    );
+            bg,
+            0,
+            o,
+            canvas.width,
+            canvas.height
+        );
+    }
 
 }
 
