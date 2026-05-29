@@ -1,0 +1,221 @@
+body{
+
+    margin:0;
+
+    padding:0;
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    overflow:hidden;
+
+    background:black;
+
+}
+
+
+/* BACKGROUND */
+
+.bg{
+
+    position:fixed;
+
+    inset:0;
+
+    background:linear-gradient(to bottom, #101010, #000);
+
+    z-index:-1;
+
+}
+
+
+/* TOP BAR */
+
+.topBar{
+
+    width:100%;
+
+    text-align:center;
+
+    padding-top:25px;
+
+}
+
+.topBar h1{
+
+    color:white;
+
+    font-size:45px;
+
+    letter-spacing:4px;
+
+    text-shadow:0 0 15px orange;
+
+}
+
+
+/* STAGE CONTAINER */
+
+.stageContainer{
+
+    width:100%;
+
+    min-height:80vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:30px;
+
+    flex-wrap:wrap;
+
+    padding:30px;
+
+    box-sizing:border-box;
+
+}
+
+
+/* STAGE CARD */
+
+.stageCard{
+
+    width:220px;
+
+    height:280px;
+
+    background:#151515;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    border:3px solid transparent;
+
+    transition:0.3s;
+
+    cursor:pointer;
+
+    position:relative;
+
+}
+
+
+.stageCard:hover{
+
+    transform:translateY(-10px) scale(1.05);
+
+    border:3px solid orange;
+
+    box-shadow:0 0 25px orange;
+
+}
+
+
+/* STAGE IMAGE */
+
+.stageCard img{
+
+    width:100%;
+
+    height:210px;
+
+    object-fit:cover;
+
+}
+
+
+/* STAGE NAME */
+
+.stageCard h2{
+
+    color:white;
+
+    text-align:center;
+
+    margin-top:15px;
+
+    letter-spacing:2px;
+
+}
+
+
+/* BACK BUTTON */
+
+#backBtn{
+
+    position:fixed;
+
+    top:20px;
+
+    left:20px;
+
+    padding:10px 20px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#111;
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+}
+
+
+#backBtn:hover{
+
+    background:orange;
+
+    color:black;
+
+}
+
+
+/* RESPONSIVE HP */
+
+@media (max-width:700px){
+
+    .topBar h1{
+
+        font-size:30px;
+
+    }
+
+    .stageContainer{
+
+        gap:15px;
+
+        padding:15px;
+
+    }
+
+    .stageCard{
+
+        width:140px;
+
+        height:200px;
+
+    }
+
+    .stageCard img{
+
+        height:140px;
+
+    }
+
+    .stageCard h2{
+
+        font-size:18px;
+
+    }
+
+}

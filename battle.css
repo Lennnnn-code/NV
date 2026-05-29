@@ -1,0 +1,309 @@
+body{
+
+    margin:0;
+
+    padding:0;
+
+    overflow:hidden;
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:black;
+
+}
+
+
+/* BACKGROUND */
+
+.bg{
+
+    position:fixed;
+
+    inset:0;
+
+    background:linear-gradient(to bottom, #1a1a1a, #000);
+
+    z-index:-2;
+
+}
+
+
+/* TOP UI */
+
+.topUI{
+
+    position:fixed;
+
+    top:20px;
+
+    left:0;
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    padding:0 30px;
+
+    box-sizing:border-box;
+
+    z-index:10;
+
+}
+
+
+/* HP BOX */
+
+.hpBox{
+
+    width:250px;
+
+}
+
+
+.hpBox h2{
+
+    color:white;
+
+    margin-bottom:10px;
+
+    text-shadow:0 0 10px cyan;
+
+}
+
+
+/* HP BAR */
+
+.hpBar{
+
+    width:100%;
+
+    height:25px;
+
+    background:#333;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    border:2px solid white;
+
+}
+
+
+/* PLAYER HP */
+
+#playerHp{
+
+    width:100%;
+
+    height:100%;
+
+    background:lime;
+
+    transition:0.2s;
+
+}
+
+
+/* ENEMY HP */
+
+#enemyHp{
+
+    width:100%;
+
+    height:100%;
+
+    background:red;
+
+    transition:0.2s;
+
+}
+
+
+/* CANVAS */
+
+#game{
+
+    width:100vw;
+
+    height:100vh;
+
+    display:block;
+
+}
+
+
+/* MOBILE CONTROL */
+
+.controls{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+}
+
+
+/* MOVE BUTTON */
+
+.moveBtns{
+
+    position:absolute;
+
+    left:20px;
+
+    bottom:20px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+
+/* BUTTON */
+
+.moveBtns button,
+#attackBtn{
+
+    width:70px;
+
+    height:70px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,0.2);
+
+    backdrop-filter:blur(5px);
+
+    color:white;
+
+    font-size:28px;
+
+    pointer-events:auto;
+
+}
+
+
+/* JUMP BUTTON */
+
+#jumpBtn{
+
+    transform:translateY(-50px);
+
+}
+
+
+/* ATTACK */
+
+#attackBtn{
+
+    position:absolute;
+
+    right:30px;
+
+    bottom:40px;
+
+}
+
+
+/* BACK BUTTON */
+
+#backBtn{
+
+    position:fixed;
+
+    top:20px;
+
+    left:20px;
+
+    padding:10px 20px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#111;
+
+    color:white;
+
+    font-size:18px;
+
+    z-index:20;
+
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width:700px){
+
+    .hpBox{
+
+        width:140px;
+
+    }
+
+    .hpBox h2{
+
+        font-size:16px;
+
+    }
+
+    .moveBtns button,
+    #attackBtn{
+
+        width:60px;
+
+        height:60px;
+
+        font-size:22px;
+
+    }
+
+}
+
+#rotateScreen{
+
+    position:fixed;
+
+    inset:0;
+
+    background:black;
+
+    color:white;
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+    font-size:40px;
+
+    text-align:center;
+
+}
+
+
+/* KALO MODE POTRAIT */
+
+@media screen and (orientation:portrait){
+
+    #rotateScreen{
+
+        display:flex;
+
+    }
+
+}

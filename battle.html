@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Battle</title>
+
+    <link rel="stylesheet" href="battle.css">
+
+</head>
+<body>
+
+    <!-- BACKGROUND -->
+    <div class="bg"></div>
+
+
+    <!-- TOP UI -->
+    <div class="topUI">
+
+        <!-- PLAYER HP -->
+        <div class="hpBox">
+
+            <h2 id="heroName">Hero</h2>
+
+            <div class="hpBar">
+
+                <div id="playerHp"></div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ENEMY HP -->
+        <div class="hpBox enemyBox">
+
+            <h2>BUFF MONSTER</h2>
+
+            <div class="hpBar">
+
+                <div id="enemyHp"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- GAME AREA -->
+    <canvas id="game"></canvas>
+
+
+    <!-- MOBILE CONTROL -->
+    <div class="controls">
+
+
+        <!-- MOVE -->
+        <div class="moveBtns">
+
+            <button id="leftBtn">⬅️</button>
+
+            <button id="jumpBtn">⬆️</button>
+
+            <button id="rightBtn">➡️</button>
+
+        </div>
+
+
+        <!-- ATTACK -->
+        <button id="attackBtn">
+
+            ⚔️
+
+        </button>
+
+    </div>
+
+
+    <!-- BUTTON -->
+    <button id="backBtn">
+
+        ⬅ BACK
+
+    </button>
+
+
+    <script src="battle.js"></script>
+
+</body>
+
+<div id="rotateScreen">
+    <h1>Putar HP Kamu</h1>
+</div>
+</html>
