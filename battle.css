@@ -320,3 +320,12 @@ body{
     }
 
 }
+
+html,
+body{
+
+    touch-action:none;
+
+    overscroll-behavior:none;
+    
+}

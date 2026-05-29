@@ -478,11 +478,15 @@ function gameLoop(){
 
 }
 
-document.body.addEventListener("click",()=>{
+document.body.addEventListener("touchstart", async ()=>{
 
     if(document.documentElement.requestFullscreen){
 
+         await
+
         document.documentElement.requestFullscreen();
+
+        screen.orientation.lock("landscape");
     }
 });
 
