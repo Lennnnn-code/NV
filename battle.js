@@ -82,9 +82,9 @@ const enemy = {
 
     y:groundY,
 
-    width:60,
+    width:140,
 
-    height:120,
+    height:180,
 
     img:new Image(),
 
