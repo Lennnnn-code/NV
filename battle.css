@@ -1,13 +1,21 @@
 html,
 body{
 
+    height:100%;
+
     width:100%;
 
-    height:100%;
+    margin:0;
+
+    padding:0;
 
     overflow:hidden;
 
-    background:black;
+    height:100%;
+
+    touch-action:none;
+
+    overscroll-behavior:none;
 
 }
 
@@ -139,11 +147,15 @@ body{
 
 #game{
 
-    width:100vw;
+    position:fixed;
 
-    height:100vh;
+    top:0;
 
-    display:block;
+    left:0;
+
+    width:100%;
+
+    height:100%;
 
 }
 
@@ -306,26 +318,4 @@ body{
 
     text-align:center;
 
-}
-
-
-/* KALO MODE POTRAIT */
-
-@media screen and (orientation:portrait){
-
-    #rotateScreen{
-
-        display:flex;
-
-    }
-
-}
-
-html,
-body{
-
-    touch-action:none;
-
-    overscroll-behavior:none;
-    
 }

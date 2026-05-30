@@ -2,18 +2,17 @@ const canvas = document.getElementById("game");
 
 const ctx = canvas.getContext("2d");
 
+let groundY = 0;
 
+function resizeCanvas(){
 canvas.width = window.innerWidth;
-
 canvas.height = window.innerHeight;
+groundY = canvas.height - 200;
+}
 
-const groundY = canvas.height - 200;
+resizeCanvas();
+window.addEventListener("resize", resizeCanvas);
 
-window.addEventListener("resize",()=>{
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    groundY = canvas.height - 200;
-});
 
 
 // HERO & STAGE
@@ -494,18 +493,21 @@ function gameLoop(){
 let isFull = false;
 
 document.body.addEventListener("touchstart", async ()=>{
-
     if(isFull) return;
 
-    if(document.documentElement.requestFullscreen){
+    try {
+        if(document.documentElement.requestFullscreen){
+            await document.documentElement.requestFullscreen();
+        }
 
-        await document.documentElement.requestFullscreen();
+        if (screen.orientation && screen.orientation.lock) {
+            await screen.orientation.lock("landscape");
+        }
+
         isFull = true;
-    }
 
-    if (screen.orientation && screen.orientation.lock) {
-
-        screen.orientation.lock("landscape").catch(()=>{});
+    } catch(e){
+        console.log("Fullscreen error:", e);
     }
 });
 
