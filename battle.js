@@ -298,13 +298,17 @@ function checkAttack(){
     document.getElementById("enemyHp").style.width =
     enemy.hp + "%";
 
+    player.hp = Math.max(0, Math.min(100,player.hp));
+
+    enemy.hp = Math.max(0, Math.min(100,enemy.hp));
+
 }
 
 
 // DRAW CHARACTER
 function drawCharacter(character){
 
-    if(character.img.complete){
+    if(!character.img.complete) return;
 
         ctx.drawImage(
 
@@ -314,7 +318,6 @@ function drawCharacter(character){
             character.width,
             character.height
         );
-    }
 
 }
 
@@ -474,15 +477,21 @@ function gameLoop(){
 
 }
 
+let isFull = false;
+
 document.body.addEventListener("touchstart", async ()=>{
+
+    if(isFull) return;
 
     if(document.documentElement.requestFullscreen){
 
-         await
+        await document.documentElement.requestFullscreen();
+        isFull = true;
+    }
 
-        document.documentElement.requestFullscreen();
+    if (screen.orientatin && screen.orientation.lock) {
 
-        screen.orientation.lock("landscape");
+        screen.orientation.lock("landscape").catch(()=>{});
     }
 });
 
