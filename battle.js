@@ -321,19 +321,16 @@ function checkAttack(){
 // DRAW CHARACTER
 function drawCharacter(character){
 
-    if(!character.img.complete) return;
+    if(!character.img || character.img.naturalWidth === 0) return;
 
-        ctx.drawImage(
-
-            character.img,
-            character.x,
-            character.y,
-            character.width,
-            character.height
-        );
-
+    ctx.drawImage(
+        character.img,
+        character.x,
+        character.y,
+        character.width,
+        character.height
+    );
 }
-
 
 // WINNER
 function checkWinner(){
