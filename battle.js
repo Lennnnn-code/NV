@@ -387,7 +387,7 @@ function drawBackground(){
 
             bg,
             0,
-            o,
+            0,
             canvas.width,
             canvas.height
         );
