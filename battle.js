@@ -112,7 +112,13 @@ document.addEventListener("keyup",(e)=>{
 
 });
 
-
+function loadImage(img,src){
+    return new Promise ((resolve,reject)=>{
+        img.onload = ()=> resolve(img);
+        img.onerror = ()=> reject("Gagal load: " + src);
+        img.src = src;
+    });
+}
 
 
 // MOBILE BUTTON
@@ -333,7 +339,7 @@ function checkWinner(){
 
         setTimeout(()=>{
 
-            location.reload();
+            location.href = location.href + "?t=" + Date.now();
 
         },2000);
 
@@ -347,7 +353,7 @@ function checkWinner(){
 
         setTimeout(()=>{
 
-            location.reload();
+            location.href = location.href + "?t=" + Date.now();
 
         },2000);
     }
@@ -489,10 +495,23 @@ document.body.addEventListener("touchstart", async ()=>{
         isFull = true;
     }
 
-    if (screen.orientatin && screen.orientation.lock) {
+    if (screen.orientation && screen.orientation.lock) {
 
         screen.orientation.lock("landscape").catch(()=>{});
     }
 });
 
-gameLoop();
+
+
+Promise.all([
+    loadImage(player.img,player.img.src),
+    loadImage(enemy.img,enemy.img.src),
+    loadImage(bg,bg.src)
+]).then(()=>{
+    gameLoop();
+})
+.catch((err)=>{
+    console.error("Load error:", err);
+    gameLoop();
+});
+
