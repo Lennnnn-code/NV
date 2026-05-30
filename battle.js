@@ -321,7 +321,7 @@ function checkAttack(){
 // DRAW CHARACTER
 function drawCharacter(character){
 
-    if(!character.img || character.img.naturalWidth === 0) return;
+    if(!character.img.complete) return;
 
     ctx.drawImage(
         character.img,
