@@ -29,7 +29,7 @@ const player = {
 
     x:150,
 
-    y:400,
+    y:groundY,
 
     width:140,
 
@@ -80,7 +80,7 @@ const enemy = {
 
     x:800,
 
-    y:400,
+    y:groundY,
 
     width:60,
 
