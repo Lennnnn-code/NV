@@ -7,6 +7,14 @@ canvas.width = window.innerWidth;
 
 canvas.height = window.innerHeight;
 
+const groundY = canvas.height - 200;
+
+window.addEventListener("resize",()=>{
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    groundY = canvas.height - 200;
+});
+
 
 // HERO & STAGE
 const hero = localStorage.getItem("hero");
@@ -221,9 +229,9 @@ function movePlayer(){
 
 
     // FLOOR
-    if(player.y >= 400){
+    if(player.y >= groundY){
 
-        player.y = 400;
+        player.y = groundY;
 
         player.velocityY = 0;
 
