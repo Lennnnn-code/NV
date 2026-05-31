@@ -247,7 +247,7 @@ function movePlayer(){
         cameraX = 0;
     }
 
-    const maxCameraX = 300;
+    const maxCameraX = 450;
 
     if(cameraX > maxCameraX){
         cameraX = maxCameraX;
