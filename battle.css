@@ -193,6 +193,8 @@ body{
 
     gap:15px;
 
+    touch-action:none;
+
 }
 
 

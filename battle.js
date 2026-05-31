@@ -165,6 +165,18 @@ leftBtn.onpointerup = ()=>{
 
 };
 
+leftBtn.onpointerleave = ()=>{
+
+    keys ["a"] = false;
+
+}
+
+leftBtn.onpointercancel = ()=>{
+
+    keys ["a"] = false;
+
+}
+
 
 rightBtn.onpointerdown = ()=>{
 
@@ -177,6 +189,18 @@ rightBtn.onpointerup = ()=>{
     keys["d"] = false;
 
 };
+
+rightBtn.onpointerleave = ()=>{
+
+    keys ["d"] = false;
+
+}
+
+rightBtn.onpointercancel = ()=>{
+
+    keys ["d"]= false;
+    
+}
 
 
 jumpBtn.onpointerdown = ()=>{
