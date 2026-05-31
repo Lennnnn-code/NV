@@ -199,31 +199,6 @@ body{
 
 
 /* BUTTON */
-
-.moveBtns button,
-#attackBtn{
-
-    width:70px;
-
-    height:70px;
-
-    border:none;
-
-    border-radius:50%;
-
-    background:rgba(255,255,255,0.2);
-
-    backdrop-filter:blur(5px);
-
-    color:white;
-
-    font-size:28px;
-
-    pointer-events:auto;
-
-}
-
-
 /* JUMP BUTTON */
 
 #jumpBtn{
@@ -278,7 +253,15 @@ body{
     height:80px;
 
     border:none;
-    background:none
+    background:transparent;
+
+    padding:0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    touch-action:none;
 }
 
 .control-btn img{
@@ -288,6 +271,10 @@ body{
 
     object-fit:contain;
     pointer-events:none;
+
+    user-select:none;
+    -webkit-user-drag:none;
+    -webkit-touch-callout:none;
 }
 
 
@@ -307,15 +294,12 @@ body{
 
     }
 
-    .moveBtns button,
-    #attackBtn{
+    .control-btn{
 
         width:60px;
 
         height:60px;
-
-        font-size:22px;
-
+        
     }
 
 }
