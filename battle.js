@@ -528,7 +528,13 @@ document.body.addEventListener("touchstart", async ()=>{
     }
 });
 
-
+function loadImage(img,src){
+    return new Promise((resolve,reject)=>{
+        img.onload = ()=> resolve(img);
+        img.onerror = reject;
+        img.src = src;
+    });
+}
 
 Promise.all([
     loadImage(player.img,player.img.src),
