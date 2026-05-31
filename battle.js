@@ -2,6 +2,8 @@ const canvas = document.getElementById("game");
 
 const ctx = canvas.getContext("2d");
 
+ctx.imageSmoothingEnabled = true;
+
 let groundY = 0;
 
 function resizeCanvas(){
@@ -41,7 +43,7 @@ const player = {
 
     velocityY:0,
 
-    gravity:0.7,
+    gravity:0.5,
 
     jumpPower:-15,
 
@@ -396,14 +398,32 @@ function drawBackground(){
 
     if(bg.complete){
 
+        let scale = Math.max(
+
+            canvas.width / bg.width,
+
+            canvas.height / bg.height
+
+        );
+
+        let width = bg.width * scale;
+
+        let height = bg.height * scale;
+
+        let x = (canvas.width - width) / 2;
+
+        let y = (canvas.height - height) / 2;
+
         ctx.drawImage(
 
             bg,
-            0,
-            0,
-            canvas.width,
-            canvas.height
+            x,
+            y,
+            width,
+            height
+
         );
+
     }
 
 }
@@ -521,4 +541,3 @@ Promise.all([
     console.error("Load error:", err);
     gameLoop();
 });
-
