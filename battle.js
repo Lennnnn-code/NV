@@ -202,6 +202,7 @@ attackBtn.onpointerdown = ()=>{
 
 };
 
+let cameraX = 0;
 
 // MOVE PLAYER
 function movePlayer(){
@@ -238,6 +239,12 @@ function movePlayer(){
 
         player.onGround = true;
 
+    }
+
+    cameraX = player.x - canvas.width / 4;
+
+    if(cameraX < 0){
+        cameraX = 0;
     }
 
 }
@@ -327,7 +334,7 @@ function drawCharacter(character){
 
     ctx.drawImage(
         character.img,
-        character.x,
+        character.x - cameraX,
         character.y,
         character.width,
         character.height
@@ -410,7 +417,7 @@ function drawBackground(){
 
         let height = bg.height * scale;
 
-        let x = (canvas.width - width) / 2;
+        let x = (canvas.width - width) / 2 - cameraX * 0.3;
 
         let y = (canvas.height - height) / 2;
 
