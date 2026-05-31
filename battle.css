@@ -272,6 +272,24 @@ body{
 
 }
 
+.control-btn{
+
+    width:80px;
+    height:80px;
+
+    border:none;
+    background:none
+}
+
+.control-btn img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:contain;
+    pointer-events:none;
+}
+
 
 /* RESPONSIVE */
 
