@@ -195,6 +195,8 @@ body{
 
     touch-action:none;
 
+    pointer-events:auto;
+
 }
 
 
@@ -217,6 +219,8 @@ body{
     right:30px;
 
     bottom:40px;
+
+    pointer-events:auto;
 
 }
 
@@ -253,6 +257,8 @@ body{
     height:80px;
 
     border:none;
+    border-radius:50%;
+
     background:transparent;
 
     padding:0;
@@ -260,6 +266,12 @@ body{
     display:flex;
     justify-content:center;
     align-items:center;
+
+    pointer-events:auto;
+
+    position:relative;
+
+    z-index:100;
 
     touch-action:none;
 }
@@ -299,7 +311,7 @@ body{
         width:60px;
 
         height:60px;
-        
+
     }
 
 }
