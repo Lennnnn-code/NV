@@ -33,9 +33,9 @@ const player = {
 
     y:groundY,
 
-    width:140,
+    width:100,
 
-    height:180,
+    height:140,
 
     img:new Image(),
 
@@ -84,9 +84,9 @@ const enemy = {
 
     y:groundY,
 
-    width:140,
+    width:100,
 
-    height:180,
+    height:140,
 
     img:new Image(),
 
@@ -506,27 +506,6 @@ function gameLoop(){
     requestAnimationFrame(gameLoop);
 
 }
-
-let isFull = false;
-
-document.body.addEventListener("touchstart", async ()=>{
-    if(isFull) return;
-
-    try {
-        if(document.documentElement.requestFullscreen){
-            await document.documentElement.requestFullscreen();
-        }
-
-        if (screen.orientation && screen.orientation.lock) {
-            await screen.orientation.lock("landscape");
-        }
-
-        isFull = true;
-
-    } catch(e){
-        console.log("Fullscreen error:", e);
-    }
-});
 
 function loadImage(img,src){
     return new Promise((resolve,reject)=>{

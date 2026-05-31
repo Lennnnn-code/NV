@@ -295,27 +295,3 @@ body{
     }
 
 }
-
-#rotateScreen{
-
-    position:fixed;
-
-    inset:0;
-
-    background:black;
-
-    color:white;
-
-    display:none;
-
-    justify-content:center;
-
-    align-items:center;
-
-    z-index:9999;
-
-    font-size:40px;
-
-    text-align:center;
-
-}
