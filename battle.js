@@ -35,9 +35,9 @@ const player = {
 
     y:groundY,
 
-    width:80,
+    width:100,
 
-    height:80,
+    height:100,
 
     img:new Image(),
 
@@ -86,9 +86,9 @@ const enemy = {
 
     y:groundY,
 
-    width:80,
+    width:100,
 
-    height:80,
+    height:100,
 
     img:new Image(),
 
