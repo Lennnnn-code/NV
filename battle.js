@@ -199,7 +199,7 @@ rightBtn.onpointerleave = ()=>{
 rightBtn.onpointercancel = ()=>{
 
     keys ["d"]= false;
-    
+
 }
 
 
@@ -507,7 +507,7 @@ function gameLoop(){
 
     ctx.fillStyle = "white";
 
-    ctx.font = "bold 80px Arial";
+    ctx.font = "bold 45px Arial";
 
     ctx.textAlign = "center";
 
