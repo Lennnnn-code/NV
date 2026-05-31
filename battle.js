@@ -247,6 +247,12 @@ function movePlayer(){
         cameraX = 0;
     }
 
+    const maxCameraX = 500;
+
+    if(cameraX > maxCameraX){
+        cameraX = maxCameraX;
+    }
+
 }
 
 
