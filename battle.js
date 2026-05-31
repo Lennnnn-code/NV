@@ -6,6 +6,8 @@ ctx.imageSmoothingEnabled = true;
 
 let groundY = 0;
 
+let cameraX = 0;
+
 function resizeCanvas(){
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -33,9 +35,9 @@ const player = {
 
     y:groundY,
 
-    width:100,
+    width:80,
 
-    height:140,
+    height:80,
 
     img:new Image(),
 
@@ -84,9 +86,9 @@ const enemy = {
 
     y:groundY,
 
-    width:100,
+    width:80,
 
-    height:140,
+    height:80,
 
     img:new Image(),
 
@@ -201,8 +203,6 @@ attackBtn.onpointerdown = ()=>{
     },200);
 
 };
-
-let cameraX = 0;
 
 // MOVE PLAYER
 function movePlayer(){
