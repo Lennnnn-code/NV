@@ -79,6 +79,10 @@ if(hero === "Angela"){
     player.img.src = "img/angela.png";
 }
 
+if(hero === "Yisunshin"){
+    player.img.src = "img/yisunshin.png";
+}
+
 // ENEMY
 const enemy = {
 
